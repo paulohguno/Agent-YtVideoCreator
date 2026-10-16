@@ -1,0 +1,54 @@
+{
+  "_nota": "Commits fixados. Atualizar somente com registro em docs/DECISOES.md.",
+  "repos": [
+    {
+      "nome": "voicestudio",
+      "origem": "https://github.com/debpalash/VoiceStudio",
+      "commit": "28d1802",
+      "uso": "backend de voz e skill voicestudio",
+      "licenca": "verificar LICENSE-NOTICE.md"
+    },
+    {
+      "nome": "motion-graphics-skills",
+      "origem": "https://github.com/Mort1d/motion-graphics-skills",
+      "commit": "7f0c371",
+      "uso": "skill motion-graphics (render)",
+      "licenca": "MIT"
+    },
+    {
+      "nome": "code-films",
+      "origem": "https://github.com/IchenDEV/code-films",
+      "commit": "657bf91",
+      "uso": "motor de orquestra para trilha dramatica",
+      "licenca": "MIT"
+    },
+    {
+      "nome": "youtube-agent-skill",
+      "origem": "https://github.com/Jakeschincariol/youtube-agent-skill",
+      "commit": "a2feb21",
+      "uso": "hooks (hooks.json, hookscore.py) e lint de titulo e thumbnail",
+      "licenca": "MIT"
+    },
+    {
+      "nome": "youtube-thumbnail-generator-ai",
+      "origem": "https://github.com/jordicor/youtube_thumbnail_generator_with_AIs",
+      "commit": "21f0674",
+      "uso": "extracao de quadros e rostos, geracao de thumbnails",
+      "licenca": "MIT"
+    },
+    {
+      "nome": "youtube-thumbnail-generator-pil",
+      "origem": "https://github.com/preangelleo/youtube-thumbnail-generator",
+      "commit": "3f3ff63",
+      "uso": "composicao de texto em PIL",
+      "licenca": "MIT"
+    },
+    {
+      "nome": "galeria-ia-catalogo",
+      "origem": "https://github.com/shopwareLabs/agentic-commerce-test-product-catalogue",
+      "commit": "81d0231",
+      "uso": "galeria de imagens geradas por IA (CC0): moodboard de estilo e base de teste para thumbnail e motion. Nunca como prova de fato",
+      "licenca": "CC0-1.0 (imagens marcadas aiGenerated em catalogue.json)"
+    }
+  ]
+}

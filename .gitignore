@@ -1,0 +1,12 @@
+# repos de terceiros: clonar pelos commits de vendor.lock.json
+vendor/
+cache/
+saidas/
+config/.env
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+.DS_Store
+.claude/settings.local.json
