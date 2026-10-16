@@ -18,7 +18,20 @@ para o usuario final; voce constroi e verifica o sistema que cria.
 3. Os arquivos reais das skills e APIs (SKILL.md, openapi.json, help dos scripts). Quando o PDF e a
    realidade divergirem, a realidade vence e a diferenca vai para docs/DIFERENCAS.md.
 
+## Caminhos
+
+"/agente" e a raiz deste repositorio (a pasta onde o Claude Code foi aberto). "/saidas" e uma pasta
+irma fora do repositorio (ex.: ../saidas). Registre o caminho real em docs/DECISOES.md.
+
 ## Limites absolutos
+
+- Voce constroi SO o sistema que gera video. Nao gere video, rascunho, mp4, still, trilha nem audio:
+  nada de render.mjs, capture.mjs, score.mjs ou sintese de voz, nem para teste. Valide com --help,
+  leitura de codigo, testes unitarios e de contrato com mocks. Render so com pedido explicito do usuario.
+- O sistema e generico: qualquer tema, tipo e formato de video entra pela entrada do run
+  (briefing, formato, estilo). Nada fixo para um video, marca ou cliente especifico.
+- Imagens e midia sao buscadas por video, sob demanda, a partir do roteiro (secao 6.4), com cache por
+  hash. Nao monte acervo previo. O que ja estiver no cache pode ficar.
 
 - Escreva somente em /agente (codigo, config, cache, testes, docs) e em /saidas/<run_id> (testes e runs).
   Nunca escreva fora dessas pastas, exceto leitura do PDF e dos repositorios.
@@ -48,7 +61,7 @@ Etapas 1 a 8 (secao 12 do PDF), uma por vez:
 5. Cenas: catalogo de modulos por papel e estilo, cada um com capture sheet e verify aprovados.
 6. Render: skill_runner com draft, final, skip-frames; QA com ffprobe e LUFS (-14).
 7. Orquestracao: run, resume, validate; eventos em events.jsonl; FAILED para o orquestrador decidir.
-8. Entrega: README, .env.example, doctor, exemplos e teste de ponta a ponta.
+8. Entrega: README, .env.example, doctor, exemplos e teste de ponta a ponta com mocks.
 
 Modulos opcionais, so depois da etapa 8 e a pedido: trilha dramatica (vendor/code-films),
 thumbnails (vendor/thumbnails), Veo (modo API ou modo prompt, secao 6.16).
@@ -105,7 +118,8 @@ Nao pergunte o que a especificacao ja responde.
 
 - /agente: codigo, config/config.yaml, config/.env.example, requirements.txt, tests/, docs/ (DECISOES.md,
   DIFERENCAS.md, PENDENCIAS.md, PROGRESSO.md), README.md com instalacao e uso.
-- /saidas/<run_id> de um teste de 20 segundos em 9:16, com run.json, qa/, out/ e a pasta do projeto copiada.
+- Teste de ponta a ponta com VoiceStudio e render simulados (mocks). O teste real de 20 s em 9:16 fica em
+  docs/PENDENCIAS.md, aguardando pedido do usuario.
 - Um relatorio final em docs/RELATORIO_FINAL.md: o que foi feito por etapa, o que ficou como aviso,
   o que precisa de decisao humana e como rodar.
 
